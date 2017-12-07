@@ -38,4 +38,5 @@ Here is a list of tips, tricks and interesting things that we've picked up over 
 }
 ```
 
-* 
+* When utilising crop marks - this will push out the final document size by 14.87mm on both the width and height `(A4 - Print) width = 210mm + 14.87mm & height = 297mm + 14.87mm`
+* Please use `em` or `rem` to size all elements (not `pt` or `px`). This is because all Outfit templates will need the ability to dynamically respond.
