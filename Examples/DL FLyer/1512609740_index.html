@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Print Generic</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <script src="tinycolor.js"></script>
+    <link rel="stylesheet" type="text/css" href="minireset.css">
+    <link rel="stylesheet" type="text/css" href="crop.css">
+    <style>
+      * {
+        -webkit-font-smoothing: antialiased;
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      h1, h2, h3, h4, h5, h6 { font-weight: 700; }
+      h1 { font-size: 1em }
+      h2 { font-size: 0.55em; font-weight: 400; }
+
+      .fit {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+
+      .cover {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      .blend {
+        background-blend-mode: screen;
+      }
+
+      .center-children {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .front-page {
+        padding: 1em;
+        flex-direction: row;
+        display: flex;
+      }
+      
+      .text-content {
+        padding: 1em;
+        width: 100%;
+        align-self: flex-end;
+      }
+      
+      .body-copy {
+        padding: 1rem;
+        font-size: 0.4em;
+      }
+      
+      .body-copy h1,
+      .body-copy h2,
+      .body-copy h3,
+      .body-copy h4,
+      .body-copy h5,
+      .body-copy h6 {
+        font-weight: 400;  
+        color: #d13d3d;
+      }
+      
+      .too-light h1,
+      .too-light h2,
+      .too-light h3,
+      .too-light h4,
+      .too-light h5,
+      .too-light h6 {
+        color: black !important;
+      }
+      
+      .body-copy h1 {
+        font-size: 1.8em
+      }
+      
+      .body-copy h2 {
+        font-size: 1.3em
+      }
+      
+      .body-copy h3 {
+        font-size: 1.1em
+      }
+      
+      .body-copy h4 {
+        font-size: 1em
+      }
+      
+      .body-copy h5 {
+        font-size: 0.8em
+      }
+      
+      .body-copy h6 {
+        font-size: 0.65em
+      }
+      
+      .body-copy * + * {
+        margin-top: 1.5em;
+      }
+
+    </style>
+  </head>
+  <body style="background: white">
+    
+    <div class="page">
+      <div class="bleed center-children">
+        <div class="fit cover blend center-children" style="background-image: url('https:&#x2F;&#x2F;outfit-v2-exports-production.s3-ap-southeast-2.amazonaws.com&#x2F;media_library_items&#x2F;d238bde7580e08df34ca36a53cb823f8&#x2F;Screen%20Shot%202017-11-23%20at%203.04.57%20PM.png'); background-color: #d13d3d"></div>
+        <div class="fit front-page">
+          <div class="text-content" style="background-color: #d13d3d">
+            <img id="front-logo" style="margin-bottom: 1em; position: relative; z-index: 999; width: 2em" src="https://outfit-v2-exports-production.s3-ap-southeast-2.amazonaws.com/media_library_items/4132b11063366d77dcd56d0e6eca7864/outfit-logo-white.svg">
+            <h1>Example flyer headline</h1>
+            <h2>Flyer template subheading</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="bleed">
+        <div class="fit">
+          <div class="body-copy">
+            <h1>Heading One.</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<h2>Heading Two</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna <strong>aliqua</strong>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Ut enim <strong>ad minim veniam</strong>, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+  <script>
+    // light or dark theme based on brightness of account color
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      if (tinycolor("#d13d3d").getBrightness() < 200) {
+        document.querySelector('.front-page').style.color = 'white';
+      }  
+      else {
+        document.querySelector('#front-logo').src = 'https://outfit-v2-exports-production.s3-ap-southeast-2.amazonaws.com/media_library_items/578752878b3e48b0758f1ef487d1997b/outfit-logo-red.svg';
+        document.querySelector('.body-copy').classList.add('too-light')
+      }
+    })
+    
+    window.showCrop = ;
+  </script>
+  <script src="main.js"></script>
+  <script src="prefixfree.js"></script>
+  </body>
+</html>

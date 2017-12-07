@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Print Generic</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <script src="tinycolor.js"></script>
+    <link rel="stylesheet" type="text/css" href="minireset.css">
+    <link rel="stylesheet" type="text/css" href="crop.css">
+    <style>
+      * {
+        -webkit-font-smoothing: antialiased;
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      h1, h2, h3, h4, h5, h6 { font-weight: 700; }
+      h1 { font-size: 1em }
+      h2 { font-size: 0.55em; font-weight: 400; }
+
+      .fit {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
+      
+      body {
+        font-size: 10pt;
+        line-height: 1.5em;
+      }
+      
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: 400;  
+        color: #d13d3d;
+      }
+      
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: black !important;
+      }
+      
+      h1 {
+        font-size: 1.8em
+      }
+      
+      h2 {
+        font-size: 1.3em
+      }
+      
+      h3 {
+        font-size: 1.1em
+      }
+      
+      h4 {
+        font-size: 1em
+      }
+      
+      h5 {
+        font-size: 0.8em
+      }
+      
+      h6 {
+        font-size: 0.65em
+      }
+      
+      body * + *:not(.col) {
+        margin-top: 1.5em;
+      }
+
+      #logo {
+        height: 2em;
+      }
+      
+      
+      @media screen {
+        .body-copy {
+          position: relative;
+          border: 1px dotted cyan;
+        }  
+        .body-copy:after {
+          font-size: 7pt;
+          position: absolute;
+          bottom: -0.5em;
+          left: 0;
+          content: 'keep letter content within the blue box';
+          color: cyan;
+        }
+      }
+
+      .header {
+        margin-bottom: 15mm; 
+        padding-bottom: 15mm; 
+        border-bottom: 1px solid #E3E3E3; 
+        width: 100%; 
+        display: flex; 
+        justify-content: flex-end;
+      }
+
+    </style>
+  </head>
+  <body style="background: white; height: 100vh; width: 100vw;">
+    <div style="margin: 0 !important; flex-direction: column; height: 100%; padding: 20mm">
+      <div class="header">
+        <img id="logo" src="https://outfit-v2-exports-production.s3-ap-southeast-2.amazonaws.com/media_library_items/578752878b3e48b0758f1ef487d1997b/outfit-logo-red.svg">
+      </div>
+      <div style="display: flex;">
+        <div style="width: 25%; text-align: right; padding-right: 3em" class="col">
+          <div id="address"><strong>Company Name<br /><br /></strong>123 Fake Street, Company Town.<br /><br />1800 Company<br /><strong>company.com</strong></div>
+        </div>
+        <div class="col" style="width: 75%;">
+          <div class="body-copy" style="overflow: hidden; height: 180mm; max-height: 197mm;">
+            <p><strong>Vivamus sagittis.</strong></p>
+<p>Lacus vel augue laoreet rutrum faucibus dolor auctor. Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis euismod semper.</p>
+<p>Sed posuere consectetur est at lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur.</p>
+<p>Nullam quis risus eget urna mollis ornare vel eu leo. Sed posuere consectetur est at lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+<p>Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+          </div>
+          <div style="position: absolute; right: 20mm; bottom: 20mm; text-align: right">
+            John Doe<br /><strong>CEO and Founder of Company</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script src="prefixfree.js"></script>
+  </body>
+</html>

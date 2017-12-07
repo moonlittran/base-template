@@ -1,0 +1,209 @@
+.crop {
+    position: absolute;
+    width: calc(7.41mm + 2px);
+    height: calc(7.41mm + 2px);
+  }
+.crop.top-left {
+  top: 0;
+  left: 0;
+}
+.crop.top-left .right {
+  position: absolute;
+  right: 1px;
+  top: 0;
+  bottom: 2.11mm;
+  border-right: 1px solid #000;
+}
+.crop.top-left .right:before {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 0;
+  bottom: 0mm;
+  border-right: 1px solid #fff;
+}
+.crop.top-left .right:after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: 0mm;
+  border-right: 1px solid #fff;
+}
+.crop.top-left .bottom {
+  position: absolute;
+  right: 2.11mm;
+  left: 0;
+  top: 0;
+  bottom: 1px;
+  border-bottom: 1px solid #000;
+}
+.crop.top-left .bottom:before {
+  content: '';
+  position: absolute;
+  right: 0px;
+  bottom: 0mm;
+  left: 0;
+  border-bottom: 1px solid #fff;
+}
+.crop.top-left .bottom:after {
+  left: 0;
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  border-bottom: 1px solid #fff;
+}
+.crop.top-right {
+  top: 0;
+  right: 0;
+}
+.crop.top-right .left {
+  position: absolute;
+  left: 1px;
+  top: 0;
+  bottom: 2.11mm;
+  border-right: 1px solid #000;
+}
+.crop.top-right .left:before {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 0;
+  bottom: 0mm;
+  border-right: 1px solid #fff;
+}
+.crop.top-right .left:after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: 0mm;
+  border-right: 1px solid #fff;
+}
+.crop.top-right .bottom {
+  position: absolute;
+  left: 2.11mm;
+  right: 0;
+  top: 0;
+  bottom: 1px;
+  border-bottom: 1px solid #000;
+}
+.crop.top-right .bottom:before {
+  content: '';
+  position: absolute;
+  right: 0px;
+  bottom: 0mm;
+  left: 0;
+  border-bottom: 1px solid #fff;
+}
+.crop.top-right .bottom:after {
+  left: 0;
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  border-bottom: 1px solid #fff;
+}
+.crop.bottom-right {
+  right: 0;
+  bottom: 0;
+}
+.crop.bottom-right .left {
+  position: absolute;
+  left: 1px;
+  top: 2.11mm;
+  bottom: 0mm;
+  border-left: 1px solid #000;
+}
+.crop.bottom-right .left:before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 0;
+  bottom: 0mm;
+  border-left: 1px solid #fff;
+}
+.crop.bottom-right .left:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: 0;
+  bottom: 0mm;
+  border-left: 1px solid #fff;
+}
+.crop.bottom-right .top {
+  position: absolute;
+  left: 2.11mm;
+  right: 0;
+  top: 1px;
+  bottom: 0px;
+  border-top: 1px solid #000;
+}
+.crop.bottom-right .top:before {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 0mm;
+  left: 0;
+  border-top: 1px solid #fff;
+}
+.crop.bottom-right .top:after {
+  left: 0;
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: 0;
+  border-top: 1px solid #fff;
+}
+.crop.bottom-left {
+  bottom: 0;
+  left: 0;
+}
+.crop.bottom-left .right {
+  position: absolute;
+  right: 1px;
+  top: 2.11mm;
+  bottom: 0mm;
+  border-right: 1px solid #000;
+}
+.crop.bottom-left .right:before {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 0;
+  bottom: 0mm;
+  border-right: 1px solid #fff;
+}
+.crop.bottom-left .right:after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: 0;
+  bottom: 0mm;
+  border-right: 1px solid #fff;
+}
+.crop.bottom-left .top {
+  position: absolute;
+  right: 2.11mm;
+  left: 0;
+  top: 1px;
+  bottom: 0px;
+  border-top: 1px solid #000;
+}
+.crop.bottom-left .top:before {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 0mm;
+  left: 0;
+  border-top: 1px solid #fff;
+}
+.crop.bottom-left .top:after {
+  left: 0;
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: 0;
+  border-top: 1px solid #fff;
+}
