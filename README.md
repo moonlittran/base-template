@@ -37,6 +37,6 @@ Here is a list of tips, tricks and interesting things that we've picked up over 
   opacity: 0.7;
 }
 ```
-
 * When utilising crop marks - this will push out the final document size by 14.87mm on both the width and height `(A4 - Print) width = 210mm + 14.87mm & height = 297mm + 14.87mm`
 * Please use `em` or `rem` to size all elements (not `pt` or `px`). This is because all Outfit templates will need the ability to dynamically respond.
+* Flex is your best friend! Whether you're converting a print PDF into HTML/CSS or creating a dynamic and responsive template for Display ads use CSS Flexbox. If you're not familiar with it, read up on it <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">here</a>
