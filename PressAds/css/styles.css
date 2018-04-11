@@ -1,0 +1,242 @@
+/* Global */
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i";
+@import "https://outfit-assets-production.s3.amazonaws.com/fonts/Cubano/stylesheet.css";
+@import "https://outfit-assets-production.s3.amazonaws.com/fonts/uwa/stylesheet.css";
+
+* {
+    -webkit-font-smoothing: antialiased;
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 10pt;
+    line-height: 1.5em;
+}
+
+h1, h2, h3 {
+    font-family: 'UWA', sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 3.75em;
+    line-height: 1em;
+    margin-bottom: 0.3em;
+    letter-spacing: -0.025em;
+}
+
+h2 {
+    font-size: 1.75em;
+    line-height: 1em;
+    margin-bottom: 0.6em;
+}
+
+h4 {
+    font-size: 1.2em;
+    line-height: 1em;
+    margin-bottom: 0.6em;
+}
+
+p {
+    line-height: 1.2em;
+    letter-spacing: -0.03em;
+}
+
+p:not(:last-child) {
+    margin-bottom: 0.6em;
+}
+
+.semi-bold {
+    font-weight: 600;
+}
+
+small {
+    font-size: 0.7em;
+}
+
+.white {
+    color: rgb(255, 255, 255);
+}
+
+.bg-white {
+    background: #ffffff;
+    color: #51473B;
+}
+
+.fit {
+    width: 750px;
+    height: auto;
+    background: #283F89;
+    color: #ffffff;
+}
+
+.wrapper {
+    margin: 0 !important;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+}
+
+/* Customs */
+.top {
+    background: url('../images/hero-image.png') no-repeat;
+    background-size: cover;
+    color: #38280C;
+    width: 100%;
+    height: auto;
+    padding: 3.15em 3.2em 1.35em;
+    position: relative;
+}
+
+.top:before {
+    content: '';
+    display: block;
+    width: 83%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+.top .inner {
+    position: relative;
+}
+
+.logo {
+    width: 14.85em;
+    margin: 0 0 3.6em -0.5em;
+}
+
+.top h1, .top h2, .top h3 {
+    color: #283F89;
+}
+
+.top h1 {
+    margin-left: -2.75em;
+    padding: 0.2em 0 0.21em 2.7em;
+    display: inline-block;
+    border-bottom: solid 3px #D7A526;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    padding: 1em 3.1em;
+}
+
+.section {
+    margin-left: -3.1em;
+    padding-left: 3.1em;
+    padding-bottom: 1em;
+}
+
+.section + .section {
+    border-top: solid 2px #ffffff;
+    padding-top: 1em;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    flex: 1;
+    margin-top: 0.4em;
+}
+
+.col + .col {
+    margin-left: 1.6em;
+}
+
+.entry {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.75em;
+    line-height: 1em;
+    height: 100%;
+}
+
+.entry .info {
+    padding: 0.25em 1.2em 1em;
+    width: 100%;
+    flex: 1;
+}
+
+.entry h4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1em;
+    border-bottom: solid 1px;
+    font-weight: 600;
+    padding: 1em 0;
+}
+
+.entry.bg-white h4, .entry.bg-white .text-info {
+    color: #283F89;
+}
+
+.entry .thumbnail {
+    height: 100%;
+    width: 36%;
+    min-width: 36%;
+    display: flex;
+    flex-direction: column;
+}
+
+.entry .thumb {
+    background: url("../images/thumb.jpg") no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.entry .thumbnail img {
+    height: auto;
+    width: 100%;
+    max-width: none;
+}
+
+.entry .time {
+    white-space: nowrap;
+    background: #D7A526;
+    color: #ffffff;
+    font-size: 1.2em;
+    padding: 1.3em 0 1em;
+    text-align: center;
+    border-bottom: solid 1px #D7A526;
+}
+
+/* Media Queries */
+@media (max-aspect-ratio: 1/3) {
+    html {
+        font-size: 10vw !important;
+    }
+}
+
+@media (min-aspect-ratio: 2/1) {
+    #wrapper {
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+}
+
+@media (min-aspect-ratio: 4/1) {
+    #wrapper {
+        justify-content: space-around;
+    }
+}
+
+@media (min-aspect-ratio: 8/1) {
+    html {
+        font-size: 20vh !important;
+    }
+}

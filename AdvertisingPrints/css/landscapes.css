@@ -1,0 +1,292 @@
+/* Global */
+@font-face {
+    font-family: "HelveticaNeueLTStd-BdCn";
+    src: url('../fonts/HelveticaNeueLTStd-BdCn.otf');
+}
+
+@font-face {
+    font-family: "HelveticaNeueLTStd-LtCn";
+    src: url('../fonts/HelveticaNeueLTStd-LtCn.otf');
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: 'HelveticaNeueLTStd-LtCn', sans-serif;
+    font-size: 10pt;
+    line-height: 1.5em;
+    background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'HelveticaNeueLTStd-BdCn', sans-serif;
+    font-weight: normal;
+    letter-spacing: -0.02em;
+}
+
+h1 { font-size: 4.382em; line-height: 1em; }
+h2 { font-size: 3.084em; line-height: 1em; }
+h3 { font-size: 1.557em; line-height: 1em; }
+h4 { font-size: 1.144em; line-height: 1em; }
+h5 { font-size: 1.3em; line-height: 1.15em; }
+h6 { font-size: 1.183em; line-height: 1.15em; }
+p {
+    font-size: 0.56em;
+    line-height: 1.3em;
+    letter-spacing: -0.04em;
+}
+p.lead {
+    font-size: 0.747em;
+    line-height: 1.25em;
+    letter-spacing: 0;
+    margin-bottom: 0.6em;
+}
+p.medium {
+    font-size: 0.623em;
+    line-height: 1.3em;
+    letter-spacing: -0.02em;
+}
+small { font-size: 0.615em; }
+sup { font-size: 0.583em; }
+strong {
+    font-family: 'HelveticaNeueLTStd-BdCn', sans-serif;
+    font-weight: normal;
+}
+td, th { font-size: 0.56em; line-height: 1.3em; white-space: nowrap; }
+i { color: #E2231A; }
+ul {
+    list-style: none;
+    padding: 0;
+    margin-left: -0.2em;
+    font-size: 0.623em;
+    display: flex;
+    flex-flow: wrap;
+}
+ul li {
+    display: inline-block;
+    white-space: nowrap;
+    line-height: 1.5em;
+    margin-left: 0.2em;
+}
+ul li:before {
+    content: "\2022";
+    color: #E2231A;
+    margin-right: 0.2em;
+}
+
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
+.yellow { color: #F68A21; }
+.red { color: #E2231A; }
+
+.page {
+    width: calc(459pt + 8.82mm + 2px) !important;
+    height: calc(159pt + 8.82mm + 2px) !important;
+    border: 1px solid purple;
+    margin-bottom: -1px;
+}
+
+.fit {
+    width: 459pt;
+    height: 159pt;
+    color: #010101;
+    display: flex;
+}
+
+.wrapper {
+    margin: 0 !important;
+    padding: 0;
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.cover {
+    background: #E2231A;
+    color: #ffffff;
+    flex: 0 0 59.5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.cover h1, .cover h2, .cover h4 {
+    transform: rotate(-9deg);
+}
+
+.cover h1 {
+    white-space: nowrap;
+    margin-left: 0;
+    margin-bottom: 0.35em;
+}
+
+.cover h2 {
+    white-space: nowrap;
+    margin-left: 0.17em;
+    margin-bottom: -0.1em;
+}
+
+.cover h2 + h2 {
+    margin-bottom: 0.25em;
+    margin-left: 0.7em;
+    font-size: 3.358em;
+}
+
+.cover h4 {
+    margin-left: 0.55em;
+    margin-bottom: -0.35em;
+    letter-spacing: -0.06em;
+}
+
+.logo {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10.4em;
+    height: 9.5em;
+    position: relative;
+}
+
+.logo:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 7.75em;
+    height: 6.45em;
+    -webkit-box-shadow: 0 0 200px 0 rgba(0,0,0,1);
+    -moz-box-shadow: 0 0 200px 0 rgba(0,0,0,1);
+    box-shadow: 0 0 200px 0 rgba(0,0,0,1);
+    z-index: 0;
+}
+
+.logo:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #E2231A;
+    z-index: 0;
+}
+
+.logo img {
+    width: 7.1em;
+    margin-left: 0.4em;
+    position: relative;
+    z-index: 1;
+}
+
+.main {
+    flex: 1 1 auto;
+    padding: 0.75em 0.8em;
+    background: #ffffff;
+    position: relative;
+}
+
+.entry {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0.3em 0;
+    border-top: solid 1pt #BBBDBE;
+    position: relative;
+}
+.entry .price {
+    width: 42pt;
+    height: 34pt;
+    background: url("../images/bg-price.svg") no-repeat;
+    background-size: 100%;
+    color: #ffffff;
+    padding: 0 0.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.entry .price h3 { letter-spacing: 0; line-height: 0.8em; }
+.entry .price.price-right {
+    background: url("../images/bg-price-right.svg") no-repeat;
+    background-size: 100%;
+}
+.entry .description { margin-top: 0.2em; }
+
+.intro { padding-bottom: 0.6em; }
+
+.pants { align-items: flex-end; padding-bottom: 0.8em; }
+.pants .info { margin-right: auto; width: 40%; }
+.pants .description { margin-top: 0.75em; }
+.pants img:not(:first-child) { margin-left: -2.1em; }
+.pants img:last-child { margin-right: -0.3em; }
+
+.pants .photos img:last-child {
+    margin-right: -0.4em;
+}
+
+.shoes { align-items: flex-end; padding-bottom: 0.6em; }
+.shoes img:first-child { margin-left: 0.3em; }
+.shoes img:nth-child(2) { margin: 0.2em 0 0 0.2em; }
+.shoes .info { margin-left: auto; text-align: right; }
+.shoes .price {
+    background: url("../images/bg-price-right.svg") no-repeat;
+    background-size: 100%;
+    justify-content: space-around;
+    padding: 0 0.5em 0.3em;
+}
+
+.glass { padding: 0.8em 0 0.6em; }
+.glass .info-secondary {
+    margin-left: auto;
+    margin-top: 1em;
+    text-align: right;
+    width: 50%;
+}
+.glass .description { margin-top: -0.3em; }
+.glass > img { margin: -0.1em -4.7em 0 0.2em; }
+
+.specials { display: block; padding: 0.6em 0; }
+.shirt { padding: 0.6em 0; }
+.shirt h6 { margin-bottom: 0.2em; }
+.shirt img {
+    position: absolute;
+    right: 0.5em;
+    top: 0.6em;
+    z-index: 1;
+}
+
+.contact { display: block; padding: 0.3em 0 0 1em; }
+
+.main:after {
+    content: "";
+    display: block;
+    width: 1.3em;
+    height: 3.5em;
+    background: url("../images/hook.svg") center no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 0.4em;
+    left: 0;
+}
+
+/**Page 3**/
+.safety { flex: 0 0 54.5%; }
+.safety h1 {
+    margin-left: 0.22em;
+    margin-bottom: -0.1em;
+}
+.safety h2 {
+    margin-left: 0.38em;
+    margin-bottom: -0.18em;
+}
+.safety h4 {
+    margin: -0.2em 0 0.25em 1em;
+    letter-spacing: -0.02em;
+}
+
+.glass3 .info-secondary { margin-top: 0; }
+.glass3 .description { margin-top: 0; }
+.glass3 > img { margin: 0.1em -5em 0 0.4em; }
