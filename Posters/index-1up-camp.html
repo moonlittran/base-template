@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1-UP Camp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./js/tinycolor.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/minireset.css">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <style>
+      .wrapper { padding-top: 16.3em; }
+      .logo { top: -14.5em; margin-left: 0.1em; }
+      .logo img { height: 15.1em; }
+      .logo .mask { width: 25.9em; top: 14.5em; margin-left: 0.1em; }
+      .legend { padding-top: 4.8em; }
+    </style>
+  </head>
+  <body>
+    <div class="fit">
+      <div class="wrapper">
+        <div class="legend">
+          <div class="logo primary">
+            <span class="mask"></span>
+            <img src="./logos/camp.svg" alt=""/>
+          </div>
+          <div class="content">
+            <h2>OZ CHARGE<br />
+              12V 6A<br />
+              Battery Charger & Maintainer
+            </h2>
+            <ul>
+              <li>1 00% automatic smart 9 stage battery charger & maintainer with reconditioning</li>
+              <li>E co mode - Ultra low power consumption</li>
+              <li>5 year warranty</li>
+            </ul>
+            <h1 class="price"><sup>$</sup>145<sup>95</sup></h1>
+            <p class="code">
+              <small>OC1206U</small>
+            </p>
+          </div>
+          <div class="battery">
+            <img src="./logos/battery-primary.svg"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var color = tinycolor("#d13d3d");
+
+      if (color.getBrightness() < 200) {
+        document.body.style.color = '#FFFFFF';
+      } else {
+        document.querySelector('.background').style.opacity = 0.2;
+        Array.prototype.slice.call(document.querySelectorAll('.cta')).forEach(function (cta) {
+          cta.style.background = 'black';
+        });
+        document.querySelector('.logo').src = 'https://outfit-v2-exports-production.s3-ap-southeast-2.amazonaws.com/media_library_items/578752878b3e48b0758f1ef487d1997b/outfit-logo-red.svg';
+      }
+
+      window.showCrop = false;
+    </script>
+    <script src="./js/main.js"></script>
+    <script src="./js/prefixfree.js"></script>
+  </body>
+</html>

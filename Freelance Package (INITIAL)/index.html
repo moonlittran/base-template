@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" style="background: white;">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/multiple.js/0.0.1/multiple.css" />
+  <style type="text/css">
+    * {
+      -webkit-font-smoothing: antialiased;
+    }
+
+    @media screen {
+      .crop .page:not(:last-child) {
+        border-bottom: 1px dotted cyan;
+      }
+    }
+
+    /*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
+
+    html,
+    body,
+    p,
+    ol,
+    ul,
+    li,
+    dl,
+    dt,
+    dd,
+    blockquote,
+    figure,
+    fieldset,
+    legend,
+    textarea,
+    pre,
+    iframe,
+    hr,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0;
+      padding: 0
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 100%;
+      font-weight: normal
+    }
+
+    ul {
+      list-style: none
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      margin: 0
+    }
+
+    html {
+      box-sizing: border-box
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit
+    }
+
+    img,
+    embed,
+    iframe,
+    object,
+    audio,
+    video {
+      height: auto;
+      max-width: 100%
+    }
+
+    iframe {
+      border: 0
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0
+    }
+
+    td,
+    th {
+      padding: 0;
+      text-align: left
+    }
+  </style>
+
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+
+    .flex {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+    }
+
+    .flex-column {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+
+    .flex-center {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .flex-justify-space-between {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+
+    .flex-justify-space-around {
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+    }
+
+    .fit {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+    }
+
+    .cover {
+      background-position: top center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .contain {
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .blend {
+      background-blend-mode: overlay;
+    }
+
+    .page {
+      width: 660px !important;
+      height: 1400px !important;
+      position: relative;
+      border: solid 1px;
+    }
+
+    body {
+      font-family: "Open Sans", sans-serif;
+      color: #58585B;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      line-height: 1em;
+      font-weight: 400;
+      margin-bottom: 0.25em;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    h2 {
+      font-size: 1.35em;
+    }
+
+    h3 {
+      font-size: 0.75em;
+    }
+
+    h4 {
+      font-size: 0.58em;
+    }
+
+    h5 {
+      font-size: 0.38em;
+    }
+
+    h6 {
+      font-size: 0.3em;
+    }
+
+    p {
+      font-size: 0.3em;
+    }
+
+    .tinymce_style--dark,
+    .text-blue {
+      color: #154ea7;
+    }
+
+    .tinymce_style--light,
+    .text-yellow {
+      color: #E6B121;
+    }
+
+    .text-white {
+      color: #ffffff;
+    }
+
+    .text-cyan {
+      color: #2da3cb;
+    }
+
+    .background {
+      background: #47b0d2 url("Assets/bg-artwork.svg") 1em -1em no-repeat;
+      _background: url(https://screenshotscdn.firefoxusercontent.com/images/d70f8c66-5146-46ce-8e05-669beeb937f0.png) top center no-repeat;
+      background-size: 150%;
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0 71%);
+      clip-path: polygon(0 0, 100% 0, 100% 60%, 0 71%);
+    }
+
+    .wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      height: 100%;
+      padding: 1em;
+    }
+
+    .logos {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+    }
+
+    .logos .logo {
+      height: 1.35em;
+      width: auto;
+    }
+
+    .logos .brand {
+      height: 0.91em;
+      width: auto;
+    }
+
+    .insurers {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: flext-start;
+      -ms-flex-align: flext-start;
+      align-items: flext-start;
+    }
+
+    .insurer-card {
+      background: url(https://outfit-v2-exports-production.s3-accelerate.amazonaws.com/media_library_items/1751208abd1af3eb86b3f83a4f087bee/bg-arrow.svg) no-repeat;
+      background-position: center center;
+      background-size: 100% 100%;
+      padding: 1.25em 0 1.75em;
+      color: #ffffff;
+    }
+
+    .insurer-card+.insurer-card {
+      margin-left: 0.3em;
+    }
+
+    .insurer-item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      padding: 0.3em;
+      border-radius: 1em;
+      font-size: 0.75em;
+      font-weight: bold;
+    }
+
+    .insurer-year {
+      text-align: center;
+      margin-bottom: 1em;
+      font-weight: bold;
+    }
+
+    .insurer-item small {
+      font-size: 0.5em;
+      line-height: 1em;
+    }
+
+    .insurer-item .percentage {
+      line-height: 0.5em;
+      font-weight: bold;
+      margin-right: 0.1em;
+    }
+
+    .insurer-item .name {
+      margin-left: 0.5em
+    }
+
+    .insurer-item .description {
+      font-size: 0.5em;
+      line-height: 1em;
+      display: block;
+    }
+
+    .insurer-item+.insurer-item {
+      margin-top: 0.15em;
+    }
+
+    .insurer-item:last-child {
+      background: #E6B121;
+    }
+
+    .benefit-card {
+      display: flex;
+      align-items: center;
+    }
+
+    .benefit-card img {
+      margin-right: 0.5em;
+    }
+
+    .offer,
+    .call2action {
+      width: 100%;
+      color: #fff;
+      background: #E6B121;
+      padding: 0.3em;
+      border-radius: 0.3em;
+      text-align: center;
+    }
+
+    .offer {
+      background-color: #2da3cb;
+    }
+
+    .foot p {
+      text-align: justify;
+      font-size: 0.17em;
+    }
+
+    .page.back .background {
+      _background: url(https://screenshotscdn.firefoxusercontent.com/images/b7bf4566-d619-4a40-9b84-e9dbfdce4fbd.png) top center no-repeat;
+      _background-size: cover;
+      clip-path: polygon(0% 71%, 100% 60%, 100% 100%, 0 100%);
+      background-size: 140%;
+      background-position: -5em 150%;
+    }
+
+    .page.back .wrapper {
+      padding: 1.5em;
+    }
+
+    @media (min-aspect-ratio: 3/2) {}
+  </style>
+
+</head>
+
+<body>
+  <div class="page front">
+    <div class="bleed">
+      <div class="background fit"></div>
+      <div class="fit">
+        <div class="wrapper">
+          <div class="logos">
+            <img src="Assets/logo-white.svg" class="logo" />
+            <img src="Assets/BWLogo.jpg" class="brand" />
+          </div>
+          <div class="heading text-white">
+            <h1 class="text-limited" data-limit="1">
+              <strong>Join</strong>
+            </h1>
+            <h3 class="text-limited" data-limit="2">the health insurer that puts you first not profits.</h3>
+          </div>
+          <div class="insurers">
+            <div class="insurer-card">
+              <h4 class="insurer-year">2017</h4>
+              <div class="insurer-item">
+                <span class="percentage">4.90</span>
+                <small>%</small>
+                <small class="name">
+                  Bupa
+                </small>
+              </div>
+              <div class="insurer-item">
+                <span class="percentage">4.90</span>
+                <small>%</small>
+                <small class="name">
+                  Bupa
+                </small>
+              </div>
+              <div class="insurer-item">
+                <span class="percentage">4.90</span>
+                <small>%</small>
+                <small class="name">
+                  Bupa
+                </small>
+              </div>
+              <div class="insurer-item">
+                <span class="percentage">4.90</span>
+                <small>%</small>
+                <small class="name">
+                  Bupa
+                </small>
+              </div>
+              <div class="insurer-item">
+                <span class="percentage">4.90</span>
+                <small>%</small>
+                <small class="name">
+                  Bupa
+                  <br />
+                  <small class="description">Corporate Health</small>
+                </small>
+              </div>
+            </div>
+            <div class="insurer-card">
+              <h4 class="insurer-year">2018</h4>
+              <div class="insurer-item">
+                <span class="percentage">4.90</span>
+                <small>%</small>
+                <small class="name">
+                  Bupa
+                </small>
+              </div>
+              <div class="insurer-item">
+                <span class="percentage">4.90</span>
+                <small>%</small>
+                <small class="name">
+                  Bupa
+                </small>
+              </div>
+              <div class="insurer-item">
+                <span class="percentage">4.90</span>
+                <small>%</small>
+                <small class="name">
+                  Bupa
+                </small>
+              </div>
+              <div class="insurer-item">
+                <span class="percentage">4.90</span>
+                <small>%</small>
+                <small class="name">
+                  Bupa
+                </small>
+              </div>
+              <div class="insurer-item">
+                <span class="percentage">4.90</span>
+                <small>%</small>
+                <small class="name">
+                  Bupa
+                  <br />
+                  <small class="description">Corporate Health</small>
+                </small>
+              </div>
+            </div>
+          </div>
+          <div class="foot">
+            <h5 class="text-cyan text-limited" data-limit="3">
+              <strong>Delivering our members the lowest rate increase for open funds in 2018.</strong>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="page back">
+    <div class="bleed">
+      <div class="background fit"></div>
+      <div class="fit">
+        <div class="wrapper">
+          <div class="heading">
+            <h3 class="text-blue text-limited" data-limit="1">
+              <strong>Why join CBHS Corporate Health?</strong>
+            </h3>
+          </div>
+          <div class="benefit-card">
+            <img src="Assets/money-icon.svg" />
+            <p>We put you first – CBHS Corporate Health delivered the lowest rate increase for open funds in 2018</p>
+          </div>
+          <div class="benefit-card">
+            <img src="Assets/money-icon.svg" />
+            <p>Get more back with generous limits on Extras – i.e. dental, optical and physio</p>
+          </div>
+          <div class="benefit-card">
+            <img src="Assets/money-icon.svg" />
+            <p>Easy to switch – we’ll do the work for you</p>
+          </div>
+          <div class="benefit-card">
+            <img src="Assets/money-icon.svg" />
+            <p>We’ll recognise waiting periods you’ve already served**</p>
+          </div>
+          <div class="benefit-card">
+            <img src="Assets/money-icon.svg" />
+            <p>30 day cooling off period</p>
+          </div>
+          <div class="offer">
+            <h5>6 weeks free* when you purchase Hospital and Extras cover
+              </br></br>8% discount on your premiums</h5>
+          </div>
+          <div class="call2action text-white">
+            <h5 class="text-white">
+              Talk to
+              <strong>Reny</strong> on
+              <strong>0472 887 783
+                <br /> reny.massoud@cbhscorp.com.au
+              </strong>
+            </h5>
+          </div>
+          <h5 class="text-white">
+            To get a quote or join online go to
+            <strong>cbhscorporatehealth.com.au/quote</strong>
+            </br></br>
+            <strong>Use your exclusive discount code</strong>
+          </h5>
+          <div class="foot text-white">
+            <p>*New Members only. Must join on both CBHS Corporate Hospital and CBHS Corporate Extras Cover. Must be active
+              and paid up-to-date for a period of 90 days after joining to receive 6 weeks free. Promotion starts 19 March
+              2018 and ends 30 June 2018. View full terms and conditions here: www.cbhscorporatehealth.com.au/youfirst ^Discount
+              is subject to eligibility and applies to the standard CBHS Corporate Health insurance premiums as advertised
+              on cbhscorporatehealth. com.au **Parts of waiting periods served within one health fund can be completed in
+              another when a person transfers funds. If you upgrade your level of cover waiting periods may apply to benefits
+              not previously included within your original cover.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/multiple.js/0.0.1/multiple.min.js"></script>
+  <script>
+    window.showCrop = false;
+
+    if (showCrop) {
+      document.querySelector('body').classList.add('crop');
+    }
+
+    var cropImage = 'https://outfit-v2-exports-production.s3-accelerate.amazonaws.com/media_library_items/bdb964a7c7fdc5ebc8bbde9204b62464/crop.svg'
+
+    Array.prototype.slice.call(document.querySelectorAll('.page'))
+      .forEach(function (page) {
+        var parser = new DOMParser();
+        page.style.cssText = 'overflow: hidden; position: relative; height: 100vh; width: 100vw';
+
+        var cropString = (
+          '<div class="crop-marks">' +
+          '<img style="height: 28.81px; width: 28.81px; position: absolute; top: 0; left: 0;" src="' + cropImage + '">' +
+          '<img style="height: 28.81px; width: 28.81px; transform: rotate(90deg); position: absolute; top: 0; right: 0;" src="' + cropImage + '">' +
+          '<img style="height: 28.81px; width: 28.81px; transform: rotate(180deg); position: absolute; bottom: 0; right: 0;" src="' + cropImage + '">' +
+          '<img style="height: 28.81px; width: 28.81px; transform: rotate(270deg); position: absolute; bottom: 0; left: 0;" src="' + cropImage + '">' +
+          '</div>'
+        )
+
+        var cropNode = parser.parseFromString(cropString, "text/html").body.firstChild;
+
+        !!window.showCrop && page.insertBefore(cropNode, null);
+      });
+
+    Array.prototype.slice.call(document.querySelectorAll('.bleed'))
+      .forEach(function (bleed) {
+        bleed.style.cssText = !!window.showCrop ?
+          'position: absolute; top: 4.41mm; right: 4.41mm; bottom: 4.41mm; left: 4.41mm;'
+          :
+          'position: absolute; top: 0; right: 0; bottom: 0; left: 0'
+      });
+
+    window.addEventListener("resize", setSize);
+
+    function setSize() {
+      var vw = (showCrop ? window.innerWidth : 660) / 100
+      var vh = (showCrop ? window.innerHeight : 1400) / 100
+      var vmin = Math.min(vw, vh)
+      var vmax = Math.max(vw, vh)
+      document.documentElement.style.fontSize = ((vmin * 2) + (vmax * 1.4) + (vh * 2)) + "px";
+    };
+
+    setSize();
+
+    function multiGradient(selector) {
+      const gStart = $(selector).first().offset().top * 100 / 1400;
+      const gEnd = ($(selector).last().offset().top + $(selector).outerHeight(true)) * 100 / 1400;
+      const multiple = new Multiple({
+        selector,
+        background: `linear-gradient(#2655a1 ${gStart}%, #3da6ca ${gEnd}%)`
+      });
+    }
+
+    window.addEventListener("resize", multiGradient('.insurer-item:not(:last-child)'));
+  </script>
+</body>
+
+</html>

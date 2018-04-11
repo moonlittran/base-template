@@ -1,0 +1,246 @@
+@font-face {
+  font-family: "Pharma";
+  src: url('../Assets/Font/Pharma/Pharma-Regular.otf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Pharma";
+  src: url('../Assets/Font/Pharma/Pharma-Regular.otf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Pharma Condensed";
+  src: url('../Assets/Font/Pharma/Pharma-RegularCondensed.otf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Pharma Condensed";
+  src: url('../Assets/Font/Pharma/Pharma-BoldCondensed.otf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url('../Assets/Font/Circular/circular-medium.otf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url('../Assets/Font/Circular/circular-medium-italic.otf');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url('../Assets/Font/Circular/circular-bold.otf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Circular";
+  src: url('../Assets/Font/Circular/circular-bold-italic.otf');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Circular Black";
+  src: url('../Assets/Font/Circular/circular-black.otf');
+}
+
+@font-face {
+  font-family: "Circular Black";
+  src: url('../Assets/Font/Circular/circular-black-italic.otf');
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Circular Book";
+  src: url('../Assets/Font/Circular/circular-book.otf');
+}
+
+@font-face {
+  font-family: "Circular Book";
+  src: url('../Assets/Font/Circular/circular-book-italic.otf');
+  font-style: italic;
+}
+
+html {
+  font-size: 16pt !important;
+}
+
+body {
+  font-family: "Circular Book", sans-serif;
+}
+
+h1 { font-size: 4.5em; }
+h3 {
+  font-size: 1.75em;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.02em;
+}
+p {
+  font-size: 1.125em;
+  margin-bottom: 1em;
+  letter-spacing: 0.02em;
+}
+
+.page {
+  width: calc(12in + 14.87mm) !important;
+  height: calc(16in + 14.87mm) !important;
+  border: 1px solid purple;
+}
+
+.bleed {
+  background: #ffffff;
+}
+
+.fit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.cover {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;  
+  height: 100%;
+}
+
+.fold {
+  color: #ffffff;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  //opacity: .7;
+}
+
+.fold-image {
+  position: absolute;
+  width: 85%;
+  left: -20%;
+  top: -5%;
+  transform: rotate(30deg);
+  max-width: none;
+}
+
+.logo {
+  font-family: "Pharma Condensed", sans-serif;
+  font-weight: bold;
+  font-size: 4.5em;
+  line-height: 1em;
+  width: 5.5em;
+  padding: 1.5em 0.75em;
+  background-size: cover;
+  position: relative;
+}
+
+.cta {
+  align-self: center;
+  font-size: 1.75em;
+  background: url('../Assets/Images/bg-cta.svg') center no-repeat;
+  background-size: contain;
+  position: relative;
+  line-height: 2.2em;
+  padding: 0 1.5em;
+  margin-bottom: 2em;
+  letter-spacing: 0.02em;
+}
+
+.content {
+  width: 100%;
+  height: fit-content;
+  text-align: center;
+  padding: 1.75em 3.75em;
+  background: #ffffff;
+  position: relative;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.logos img {
+  height: 2.15em;
+  margin: 1em 0;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+}
+
+.contacts {
+  display: flex;
+  font-family: "Circular Black", sans-serif;
+  font-size: 1.125em;
+  letter-spacing: 0.02em;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5em;
+}
+
+.contact img {
+  height: 0.85em;
+  margin-right: 0.25em;
+}
+
+/*Page 1*/
+.page-1 .wrapper {
+  /*background-image: url("../Poster 1/Poster-1-01.jpg");
+  background-size: cover;*/
+}
+.page-1 .background {
+  background-image: url("../Poster 1/imgAsset 37@2x.png");
+  background-position: top center;
+}
+
+/*Page 2*/
+.page-2 .wrapper {
+  /*background-image: url("../Poster 1/Poster-1-01.jpg");
+  background-size: cover;*/
+}
+.page-2 .background {
+  background-image: url("../Poster 1/imgAsset 36@2x.png");
+  background-position: top center;
+}
+.page-2 .fold-image {
+  width: 122%;
+  left: -36%;
+  top: -27%;
+  transform: rotate(75deg);
+}
+.page-2 .logo {
+  width: 6.25em;
+}
+.page-2 .content {
+  width: auto !important;
+  margin: 0 3em 3em 0;
+  padding-right: 6.5em;
+  text-align: left;
+}
