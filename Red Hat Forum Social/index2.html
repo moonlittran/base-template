@@ -19,7 +19,7 @@
     h4,
     h5,
     h6 {
-      line-height: 1em;
+      line-height: 1.25em;
       font-weight: 400;
     }
 
@@ -48,7 +48,10 @@
     }
 
     p {
-      font-size: 0.3em;
+      font-weight: 200;
+      font-size: 0.5em;
+      line-height: 1.25em;
+      letter-spacing: 0.03em;
     }
 
     .tinymce_style--dark,
@@ -96,21 +99,21 @@
       align-items: center;
       text-align: center;
       height: 100%;
-      padding: 0.8em;
+      padding: 0.8em 1em;
     }
 
     .logo {
-      width: 4.5em;
-      margin: 0.25em 0;
+      width: 3.65em;
     }
 
     .event {
-      font-size: 0.58em;
-      line-height: 1.5em;
+      font-size: 0.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .name {
-      font-weight: 800;
       letter-spacing: 0.02em;
     }
 
@@ -118,12 +121,39 @@
       letter-spacing: 0.1em;
     }
 
-    .headline {
-      font-size: 2.4em;
+    .entry {
+      border: solid #ffffff;
+      border-width: 1px 0;
+      padding: 1em;
+      display: flex;
+      align-items: flex-start;
+      width: 80%;
+      text-align: left;
     }
 
-    .subHeadline {
-      font-size: 0.61em;
+    .entry .thumbnail {
+      width: 3.7em;
+      height: 4.1em;
+      background-color: #fff;
+      flex: 1 0 auto;
+      margin-right: 0.8em;
+    }
+
+    .entry .title {      
+      margin-left: 0.5em;
+      margin-bottom: 1em;
+      letter-spacing: 0.04em;
+    }
+
+    .entry .text {
+      line-height: 1em;
+    }
+
+    .foot {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      width: 100%;
     }
 
     .call2Action {
@@ -133,6 +163,24 @@
       background: #fff;
       font-weight: 600;
       line-height: 1em;
+      margin: 1em 0;
+    }
+
+    .coBrand {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .coBrand .brandLogo {
+      height: 1.66em;
+      width: 5.15em;
+      background-color: #fff;
+    }
+
+    .coBrand .brandName {
+      font-size: 0.42em;
+      margin-top: 0.5em;
     }
 
     @media (min-aspect-ratio: 3/2) {}
@@ -142,23 +190,35 @@
 <body>
   <div class="page">
     <div class="bleed">
-      <div class="test-background-image fit" style="background-image: url('Screenshot-2018-4-11 RH_Forum_Generic_Banner - RH_Forum_Generic_Banner pdf(1).png');"></div>
+      <div class="test-background-image fit" style="background-image: url('Screenshot-2018-4-11 RH_Forum_Generic_Banner - RH_Forum_Generic_Banner pdf(3).png');"></div>
       <div class="background fit"></div>
       <div class="fit">
         <div class="wrapper">
           <img src="https://outfit-v2-exports-production.s3-accelerate.amazonaws.com/media_library_items/91b162e6e7835047fce0bd4ef780363f/logo-01.svg"
             class="logo">
           <h3 class="event">
-            <storng class="name">RED HAT FORUM</storng>
-            <br />
+            <strong class="name">RED HAT FORUM</strong>
             <span class="meta textLimited" data-limit="1">ZURICH | 9 SEPTEMBER, 2018</span>
           </h3>
-          <h1 class="headline textLimited" data-limit="2">
-            IDEAS WORTH
-            <br /> EXPLORING
-          </h1>
-          <h3 class="subHeadline textLimited" data-limit="2">Come with questions. Leave with ideas.</h3>
-          <div class="call2Action">REGISTER</div>
+          <div class="entry">
+            <div class="thumbnail cover"></div>
+            <div class="text">
+              <h3 class="title textLimited" data-limit="2">Come with questions. Leave with ideas.</h3>
+              <p class="description textLimited" data-limit="5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                dolore magna aliquam</p>
+            </div>
+          </div>
+          <div class="foot">
+            <div class="coBrand" style="visibility: hidden;">
+              <div class="brandLogo contain"></div>
+              <span class="brandName">Proud sponsor of Red Hat Forums</p>
+            </div>
+            <div class="call2Action">REGISTER</div>
+            <div class="coBrand">
+              <div class="brandLogo contain"></div>
+              <span class="brandName">Proud sponsor of Red Hat Forums</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -220,7 +280,7 @@
       Array.prototype.slice.call(document.querySelectorAll('.textLimited'))
         .forEach(function (e) {
           const limit = e.getAttribute('data-limit');
-          const lines = countElementLines(e); console.log(limit, lines);
+          const lines = countElementLines(e);
           if (lines > limit) {
             e.classList.add("overflow");
           } else {
