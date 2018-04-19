@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" style="background: white;">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="assets/css/minireset.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/global.css" />
+  <style type="text/css">
+    @import url('https://outfit-assets-production.s3.amazonaws.com/fonts/Mandatory/stylesheet.css');
+    @import url('https://outfit-assets-production.s3.amazonaws.com/fonts/Gotham/stylesheet.css');
+
+    body {
+      font-family: 'Gotham', sans-serif;
+      color: #ffffff;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Mandatory', sans-serif;
+      line-height: 1em;
+      font-weight: 400;
+      margin: 0.2em 0;
+    }
+
+    h1 {
+      font-size: 1.5em;
+    }
+
+    h2 {
+      font-size: 1.25em;
+    }
+
+    h3 {
+      font-size: 1em;
+    }
+
+    h4 {
+      font-size: 0.75em;
+    }
+
+    h5 {
+      font-size: 0.5em;
+    }
+
+    h6 {
+      font-size: 0.25em;
+    }
+
+    p {
+      font-size: 0.362em;
+    }
+
+    .tinymce_style--dark,
+    .text-blue {
+      color: #154ea7;
+    }
+
+    .tinymce_style--light,
+    .text-yellow {
+      color: #E6B121;
+    }
+
+    .text-white {
+      color: #ffffff;
+    }
+
+    .text-cyan {
+      color: #2da3cb;
+    }
+
+    .background {
+      background-color: #d5111b;
+      background-image: url("assets/images/NRL2_Horizontal.png");
+      background-size: 258%;
+      background-position: center center;
+    }
+
+    .wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      height: 100%;
+      padding: 0.4em 0.9em;
+    }
+
+    .content {
+      flex: 1 0 auto;
+      margin-right: auto;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .headings {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;    
+    }
+
+    .promo {
+      border: solid 0.1em #fff;
+      display: flex;
+      width: fit-content;
+      font-size: 1.88em;
+    }
+
+    .odds {
+      background: #fff;
+      color: #d5111b;
+      display: inline-block;
+      padding: 0.1em 0.25em 0.1em 0.15em;
+    }
+
+    .winning {
+      background: rgba(0, 0, 0, .54);
+      padding: 0.1em 0.2em;
+      display: inline-block;
+    }
+
+    .details {
+      font-size: 1em;
+      margin-bottom: 1em;
+    }
+
+    .logo {
+      text-align: right;
+      position: absolute;
+      bottom: 0.9em;
+      right: 0.9em;
+      display: flex;
+      align-items: center;
+    }
+
+    .logoImg {
+      width: 8.1em;
+      height: auto;
+    }
+
+    @media (aspect-ratio: 768/1152) {
+      .test-background-image {
+        background-image: url("assets/images/768x1152_NRL (oOh).png");
+      }
+    }
+
+    @media (aspect-ratio: 1248/320) {
+      .test-background-image {
+        background-image: url("assets/images/1248x320_NRL (APN).jpeg");
+      }
+      .background {
+        background-size: 350%;
+        background-position: 46% 42%;
+      }
+    }
+
+    @media (aspect-ratio: 504/1008) {
+      .test-background-image {
+        background-image: url("assets/images/504x1008_NRL (oOh).png");
+      }
+    }
+
+    @media (aspect-ratio: 1836/432) {
+      .test-background-image {
+        background-image: url("assets/images/1836x432_NRL (oOh).jpeg");
+      }
+      .background {
+        background-size: 350%;
+        background-position: 46% 42%;
+      }
+    }
+
+    @media (aspect-ratio: 3096/432) {
+      .test-background-image {
+        background-image: url("assets/images/3096x432_NRL (Goa).png");
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <div class="bleed">
+      <div class="test-background-image cover fit"></div>
+      <div class="background cover fit"></div>
+      <div class="fit">
+        <div class="wrapper">
+          <div class="content">
+            <div class="headings">
+              <h1 class="game">Rabbitohs VS Bulldogs</h1>
+              <h2 class="promo">
+                <span class="odds">$2.50</span>
+                <span class="winning">Bulldogs to win</span>
+              </h2>
+              <h3 class="details">Friday | Max Bet $50</h3>
+            </div>
+            <p class="copy">
+              Promotional T&CS Apply & available on website.
+              <br /> Gamble Responsibly.
+            </p>
+          </div>
+          <div class="logo">
+            <img class="logoImg" src="assets/images/ladbrokes_logo.svg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    window.showCrop = false;
+
+    if (showCrop) {
+      document.querySelector('body').classList.add('crop');
+    }
+
+    var cropImage = 'https://outfit-v2-exports-production.s3-accelerate.amazonaws.com/media_library_items/bdb964a7c7fdc5ebc8bbde9204b62464/crop.svg'
+
+    Array.prototype.slice.call(document.querySelectorAll('.page'))
+      .forEach(function (page) {
+        var parser = new DOMParser();
+        page.style.cssText = 'overflow: hidden; position: relative; height: 100vh; width: 100vw';
+
+        var cropString = (
+          '<div class="crop-marks">' +
+          '<img style="height: 28.81px; width: 28.81px; position: absolute; top: 0; left: 0;" src="' + cropImage + '">' +
+          '<img style="height: 28.81px; width: 28.81px; transform: rotate(90deg); position: absolute; top: 0; right: 0;" src="' + cropImage + '">' +
+          '<img style="height: 28.81px; width: 28.81px; transform: rotate(180deg); position: absolute; bottom: 0; right: 0;" src="' + cropImage + '">' +
+          '<img style="height: 28.81px; width: 28.81px; transform: rotate(270deg); position: absolute; bottom: 0; left: 0;" src="' + cropImage + '">' +
+          '</div>'
+        );
+
+        var cropNode = parser.parseFromString(cropString, "text/html").body.firstChild;
+        !!window.showCrop && page.insertBefore(cropNode, null);
+      });
+
+    Array.prototype.slice.call(document.querySelectorAll('.bleed'))
+      .forEach(function (bleed) {
+        bleed.style.cssText = !!window.showCrop
+          ? 'position: absolute; top: 4.41mm; right: 4.41mm; bottom: 4.41mm; left: 4.41mm;'
+          : 'position: absolute; top: -3mm; right: -3mm; bottom: -3mm; left: -3mm;';
+      });
+
+    window.addEventListener("resize", setSize);
+
+    function setSize() {
+      var vw = (showCrop ? window.innerWidth : window.innerWidth + 57.62) / 100
+      var vh = (showCrop ? window.innerHeight : window.innerHeight + 57.62) / 100
+      var vmin = Math.min(vw, vh)
+      var vmax = Math.max(vw, vh)
+      document.documentElement.style.fontSize = ((vmin * 2) + (vmax * 1.4) + (vh * 2)) + "px";
+    }
+
+    function countElementLines(e) {
+      const height = e.clientHeight;
+      const lineHeight = parseFloat(window.getComputedStyle(e).getPropertyValue('line-height'));
+      const lines = Math.ceil(height / lineHeight);
+
+      return lines;
+    }
+
+    function checkLimitedText() {
+      Array.prototype.slice.call(document.querySelectorAll('.textLimited'))
+        .forEach(function (e) {
+          const limit = e.getAttribute('data-limit');
+          const lines = countElementLines(e); console.log(limit, lines);
+          if (lines > limit) {
+            e.classList.add("overflow");
+          } else {
+            e.classList.remove("overflow");
+          }
+        });
+    }
+
+    setSize();
+    //setInterval(checkLimitedText, 1000);
+  </script>
+</body>
+
+</html>
