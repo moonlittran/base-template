@@ -25,34 +25,6 @@
       margin: 0.2em 0;
     }
 
-    h1 {
-      font-size: 1.5em;
-    }
-
-    h2 {
-      font-size: 1.25em;
-    }
-
-    h3 {
-      font-size: 1em;
-    }
-
-    h4 {
-      font-size: 0.75em;
-    }
-
-    h5 {
-      font-size: 0.5em;
-    }
-
-    h6 {
-      font-size: 0.25em;
-    }
-
-    p {
-      font-size: 0.362em;
-    }
-
     .tinymce_style--dark,
     .text-blue {
       color: #154ea7;
@@ -74,41 +46,54 @@
     .background {
       background-color: #d5111b;
       background-image: url("assets/images/NRL2_Horizontal.png");
-      background-size: 258%;
-      background-position: center center;
+    }
+
+    .main {
+      display: flex;
+      align-items: flex-end;
     }
 
     .wrapper {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
       align-items: flex-end;
-      height: 100%;
-      padding: 0.4em 0.9em;
+      width: 100%;
+      padding: 0.6em 0.9em;
     }
 
     .content {
-      flex: 1 0 auto;
-      margin-right: auto;
+      flex: 1 1 auto;
+      margin-right: -5em;
       text-transform: uppercase;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      max-width: 100%;
     }
 
     .headings {
       flex: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;    
+      justify-content: flex-end;
+      align-items: flex-start;
+      width: fit-content;
+    }
+
+    .game {
+      font-size: 1.5em;
+      width: fit-content;
     }
 
     .promo {
       border: solid 0.1em #fff;
       display: flex;
       width: fit-content;
-      font-size: 1.88em;
+      font-size: 1.9em;
+      max-width: 100%;
     }
 
     .odds {
@@ -126,16 +111,20 @@
 
     .details {
       font-size: 1em;
-      margin-bottom: 1em;
+    }
+
+    .copy {
+      font-size: 0.362em;
+      margin: 1em 0 0;
     }
 
     .logo {
       text-align: right;
-      position: absolute;
-      bottom: 0.9em;
-      right: 0.9em;
       display: flex;
+      justify-content: flex-end;
       align-items: center;
+      flex: 1 1 auto;
+      min-width: 5em;
     }
 
     .logoImg {
@@ -143,9 +132,65 @@
       height: auto;
     }
 
+    @media (max-aspect-ratio: 1/1) {      
+      .wrapper {
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+      }
+      .content {
+        margin: 0;
+      }
+      .headings {
+        max-width: 100%;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 0.1em;
+      }
+      .headings>* {
+        text-align: center;
+      }
+      .headings>.copy {
+        display: none;
+      }
+      .game {
+        font-size: 0.85em;
+      }      
+      .promo {
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.25em;
+        letter-spacing: 0.1em;
+        min-width: 75%;
+      }      
+      .promo>span {
+        text-align: center;
+        width: 100%;
+      }
+      .odds {
+        padding-bottom: 0.2em;
+      }
+      .details {
+        font-size: 0.65em;
+      }
+      .logo {
+        display: block;
+      }
+      .wrapper>.copy {
+        display: block;
+        text-align: center;
+      }
+    }
+
     @media (aspect-ratio: 768/1152) {
       .test-background-image {
-        background-image: url("assets/images/768x1152_NRL (oOh).png");
+        background-image: url("assets/images/768x1152_NRL (oOh).jpeg");
+      }
+    }
+
+    @media (aspect-ratio: 504/1008) {
+      .test-background-image {
+        background-image: url("assets/images/504x1008_NRL (oOh).png");
       }
     }
 
@@ -156,12 +201,6 @@
       .background {
         background-size: 350%;
         background-position: 46% 42%;
-      }
-    }
-
-    @media (aspect-ratio: 504/1008) {
-      .test-background-image {
-        background-image: url("assets/images/504x1008_NRL (oOh).png");
       }
     }
 
@@ -177,7 +216,39 @@
 
     @media (aspect-ratio: 3096/432) {
       .test-background-image {
-        background-image: url("assets/images/3096x432_NRL (Goa).png");
+        background-image: url("assets/images/3096x432_NRL (Goa).jpeg");
+      }
+      .wrapper {
+        padding: 0.5em 0.9em;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .content {
+        flex: 1;
+        align-items: center;
+        margin: 0;
+      }
+      .logo {
+        flex: 1;
+        justify-content: center;
+      }
+      .logoImg {
+        max-width: 6.25em;
+      }
+      .game {
+        font-size: 1em;
+      }
+      .promo {
+        font-size: 1.2em;
+      }
+      .details {
+        font-size: 0.6em;
+      }
+      .copy {
+        font-size: 0.25em;
+      }
+      .background {
+        background-size: 300%;
       }
     }
   </style>
@@ -186,27 +257,30 @@
 <body>
   <div class="page">
     <div class="bleed">
-      <div class="test-background-image cover fit"></div>
       <div class="background cover fit"></div>
-      <div class="fit">
+      <div class="test-background-image cover fit"></div>
+      <div class="main fit">
         <div class="wrapper">
           <div class="content">
             <div class="headings">
-              <h1 class="game">Rabbitohs VS Bulldogs</h1>
+              <h1 class="game">Rabbitohs<br />VS Bulldogs</h1>
               <h2 class="promo">
                 <span class="odds">$2.50</span>
-                <span class="winning">Bulldogs to win</span>
+                <span class="winning">Bulldogs<br />to win</span>
               </h2>
               <h3 class="details">Friday | Max Bet $50</h3>
+              <p class="copy">
+                Promotional T&CS Apply & available on website. Gamble Responsibly.
+              </p>
             </div>
-            <p class="copy">
-              Promotional T&CS Apply & available on website.
-              <br /> Gamble Responsibly.
-            </p>
           </div>
           <div class="logo">
             <img class="logoImg" src="assets/images/ladbrokes_logo.svg" />
           </div>
+          <p class="copy">
+            Promotional T&CS Apply & available on website.
+            <br /> Gamble Responsibly.
+          </p>
         </div>
       </div>
     </div>
